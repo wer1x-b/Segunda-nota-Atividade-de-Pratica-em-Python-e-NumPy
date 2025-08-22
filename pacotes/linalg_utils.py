@@ -3,16 +3,16 @@ import numpy as np
 def exemplo_linalg():
     """Exemplo de uso de funções de álgebra linear do NumPy."""
     # Criando uma matriz 2x2
-    A = np.array([[1, 2], [3, 4]])
-    
-    # Calculando o determinante da matriz
-    det_A = np.linalg.det(A)
+    a = np.array([[1, 2], [3, 4]])
     
     # Calculando a inversa da matriz
-    inv_A = np.linalg.inv(A)
+    b = np.linalg.inv(a)
     
-    # Resolvendo um sistema de equações lineares Ax = b
-    b = np.array([5, 11])
-    x = np.linalg.solve(A, b)
+    # Calculando o determinante da matriz
+    c = np.linalg.det(a)
     
-    return det_A, inv_A, x
+    return {
+        "matriz original": a,
+        "inversa": b,
+        "determinante": c
+    }
